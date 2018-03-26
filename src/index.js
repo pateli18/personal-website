@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Section from './Section';
 import Profile from './Profile';
+import NavBar from './NavBar';
 import registerServiceWorker from './registerServiceWorker';
 
 class Index extends React.Component {
@@ -46,7 +47,8 @@ class Index extends React.Component {
 		 
 		return (
 			<div>
-				<Profile onClick={this.toggleFilter} filters={filters}/>
+				<NavBar onClick={this.toggleFilter} filters={filters} />
+				<Profile />
 				<Section header="Projects" objectClicked={this.state.objectClicked} sectionClass="row section"/>
 				<Section header="Professional Experience" objectClicked={this.state.objectClicked} sectionClass="row section bg-grey"/>
 				<Section header="Education" objectClicked={this.state.objectClicked} sectionClass="row section"/>
